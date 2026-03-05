@@ -7,64 +7,117 @@ import com.iut.bordeaux.courses.common.ICalculator;
 
 class CalculatorTest {
 
-    // TODO: 
-    //  - initialize calculator globally
-    //  - refactor test cases using Behavior-Driven Development (BDD)
-    //  - rename test cases to match best practice
+    ICalculator calc = new CalculatorImpl();
 
     @Test
-    void testSum5() {
-        ICalculator calc = new CalculatorImpl();
-        int result = calc.sum(2, 3);
-        assertThat(result).isEqualTo(5);
+    void given2And3_whenSum_thenReturns5() {
+        // GIVEN
+        int a = 2;
+        int b = 3;
+        int expected = 5;
+
+        // WHEN
+        int result = calc.sum(a, b);
+
+        // THEN
+        assertThat(expected).isEqualTo(result);
     }
 
     @Test
-    void testSum8() {
-        ICalculator calc = new CalculatorImpl();
-        int result = calc.sum(5, 3);
-        assertThat(result).isEqualTo(8);
+    void given5And3_whenSum_thenReturns8() {
+        // GIVEN
+        int a = 5;
+        int b = 3;
+        int expected = 8;
+
+        // WHEN
+        int result = calc.sum(a, b);
+
+        // THEN
+        assertThat(expected).isEqualTo(result);
     }
 
     @Test
-    void testSubstractMinus1() {
-        ICalculator calc = new CalculatorImpl();
-        int result = calc.substract(2, 3);
-        assertThat(result).isEqualTo(-1);
+    void given2And3_whenSubstract_thenReturnsMinus1() {
+        // GIVEN
+        int a = 2;
+        int b = 3;
+        int expected = -1;
+
+        // WHEN
+        int result = calc.substract(a, b);
+
+        // THEN
+        assertThat(expected).isEqualTo(result);
     }
 
     @Test
-    void testSubstract7() {
-        ICalculator calc = new CalculatorImpl();
-        int result = calc.substract(7, 0);
-        assertThat(result).isEqualTo(7);
+    void given7And0_whenSubstract_thenReturns7() {
+        // GIVEN
+        int a = 7;
+        int b = 0;
+        int expected = 7;
+
+        // WHEN
+        int result = calc.substract(a, b);
+
+        // THEN
+        assertThat(expected).isEqualTo(result);
     }
 
     @Test
-    void testMultiplty6() {
-        ICalculator calc = new CalculatorImpl();
-        int result = calc.multiply(2, 3);
-        assertThat(result).isEqualTo(6);
+    void given2And3_whenMultiply_thenReturns6() {
+        // GIVEN
+        int a = 2;
+        int b = 3;
+        int expected = 6;
+
+        // WHEN
+        int result = calc.multiply(a, b);
+
+        // THEN
+        assertThat(expected).isEqualTo(result);
     }
 
     @Test
-    void testMultiplty12() {
-        ICalculator calc = new CalculatorImpl();
-        int result = calc.multiply(2, 6);
-        assertThat(result).isEqualTo(12);
+    void given2And6_whenMultiply_thenReturns12() {
+        // GIVEN
+        int a = 2;
+        int b = 6;
+        int expected = 12;
+
+        // WHEN
+        int result = calc.multiply(a, b);
+
+        // THEN
+        assertThat(expected).isEqualTo(result);
     }
 
     @Test
-    void testDivide6() {
-        ICalculator calc = new CalculatorImpl();
-        int result = calc.divide(12, 2);
-        assertThat(result).isEqualTo(6);
+    void given12And2_whenDivide_thenReturns6() {
+        // GIVEN
+        int a = 12;
+        int b = 2;
+        int expected = 6;
+
+        // WHEN
+        int result = calc.divide(a, b);
+
+        // THEN
+        assertThat(expected).isEqualTo(result);
     }
 
     @Test
-    void testDivide3() {
-        ICalculator calc = new CalculatorImpl();
-        int result = calc.divide(6, 2);
-        assertThat(result).isEqualTo(3);
+    void given6And2_whenDivide_thenReturns3() {
+        // GIVEN
+        int a = 6;
+        int b = 2;
+        int expected = 3;
+
+        // WHEN
+        int result = calc.divide(a, b);
+
+        // THEN
+        assertThat(expected).isEqualTo(result);
     }
 }
