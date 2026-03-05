@@ -21,12 +21,12 @@ class CalculatorTest {
     // - refactor test cases using Parameterized tests
     // - find and test an "edge case"
 
-    @Test
-    void given2And3_whenSum_thenReturn5() {
-        // GIVEN
-        int a = 2;
-        int b = 3;
-        int expectedResult = 5;
+    @ParameterizedTest
+    @CsvSource({
+            "2,3,5"
+    })
+    void given2And3_whenSum_thenReturn5(int a, int b, int expectedResult) {
+        // GIVEN : Params CsvSource
 
         // WHEN
         int result = calc.sum(a, b);
@@ -35,12 +35,12 @@ class CalculatorTest {
         assertThat(result).isEqualTo(expectedResult);
     }
 
-    @Test
-    void given5And3_whenSum_thenReturn8() {
-        // GIVEN
-        int a = 5;
-        int b = 3;
-        int expectedResult = 8;
+    @ParameterizedTest
+    @CsvSource({
+            "5,3,8"
+    })
+    void given5And3_whenSum_thenReturn8(int a, int b, int expectedResult) {
+        // GIVEN : Params CsvSource
 
         // WHEN
         int result = calc.sum(a, b);
@@ -49,12 +49,12 @@ class CalculatorTest {
         assertThat(result).isEqualTo(expectedResult);
     }
 
-    @Test
-    void given2And3_whenSubstract_thenReturnMinus1() {
-        // GIVEN
-        int a = 2;
-        int b = 3;
-        int expectedResult = -1;
+    @ParameterizedTest
+    @CsvSource({
+            "2,3,-1"
+    })
+    void given2And3_whenSubstract_thenReturnMinus1(int a, int b, int expectedResult) {
+        // GIVEN : Params CsvSource
 
         // WHEN
         int result = calc.substract(a, b);
@@ -63,12 +63,12 @@ class CalculatorTest {
         assertThat(result).isEqualTo(expectedResult);
     }
 
-    @Test
-    void given7And0_whenSubstract_thenReturn7() {
-        // GIVEN
-        int a = 7;
-        int b = 0;
-        int expectedResult = 7;
+    @ParameterizedTest
+    @CsvSource({
+            "7,0,7"
+    })
+    void given7And0_whenSubstract_thenReturn7(int a, int b, int expectedResult) {
+        // GIVEN : Params CsvSource
 
         // WHEN
         int result = calc.substract(a, b);
@@ -77,12 +77,12 @@ class CalculatorTest {
         assertThat(result).isEqualTo(expectedResult);
     }
 
-    @Test
-    void given2And3_whenMultiplty_thenReturn6() {
-        // GIVEN
-        int a = 2;
-        int b = 3;
-        int expectedResult = 6;
+    @ParameterizedTest
+    @CsvSource({
+            "2,3,6"
+    })
+    void given2And3_whenMultiplty_thenReturn6(int a, int b, int expectedResult) {
+        // GIVEN : Params CsvSource
 
         // WHEN
         int result = calc.multiply(a, b);
@@ -91,12 +91,12 @@ class CalculatorTest {
         assertThat(result).isEqualTo(expectedResult);
     }
 
-    @Test
-    void given2And6_whenMultiplty_thenReturn12() {
-        // GIVEN
-        int a = 2;
-        int b = 6;
-        int expectedResult = 12;
+    @ParameterizedTest
+    @CsvSource({
+            "2,6,12"
+    })
+    void given2And6_whenMultiplty_thenReturn12(int a, int b, int expectedResult) {
+        // GIVEN : Params CsvSource
 
         // WHEN
         int result = calc.multiply(a, b);
@@ -105,12 +105,12 @@ class CalculatorTest {
         assertThat(result).isEqualTo(expectedResult);
     }
 
-    @Test
-    void given12And2_whenDivide_thenReturn6() {
-        // GIVEN
-        int a = 12;
-        int b = 2;
-        int expectedResult = 6;
+    @ParameterizedTest
+    @CsvSource({
+            "12,2,6"
+    })
+    void given12And2_whenDivide_thenReturn6(int a, int b, int expectedResult) {
+        // GIVEN : Params CsvSource
 
         // WHEN
         int result = calc.divide(a, b);
@@ -119,12 +119,12 @@ class CalculatorTest {
         assertThat(result).isEqualTo(expectedResult);
     }
 
-    @Test
-    void given6And2_whenDivide_thenReturn3() {
-        // GIVEN
-        int a = 6;
-        int b = 2;
-        int expectedResult = 3;
+    @ParameterizedTest
+    @CsvSource({
+            "6,2,3"
+    })
+    void given6And2_whenDivide_thenReturn3(int a, int b, int expectedResult) {
+        // GIVEN : Params CsvSource
 
         // WHEN
         int result = calc.divide(a, b);
