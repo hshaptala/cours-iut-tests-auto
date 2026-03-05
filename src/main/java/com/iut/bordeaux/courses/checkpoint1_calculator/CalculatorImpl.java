@@ -12,20 +12,17 @@ public class CalculatorImpl implements ICalculator {
 
 	@Override
 	public int substract(int a, int b) {
-		// TODO: Implement substract method 
-		return 0;
+		return a - b;
 	}
 
 	@Override
 	public int divide(int a, int b) {
-		// TODO: Implement divide method
-		return 0;
+		return a / b;
 	}
 
 	@Override
 	public int multiply(int a, int b) {
-		// TODO: Implement multiply method
-		return 0;
+		return a * b;
 	}
 
 }

@@ -9,41 +9,125 @@ class CalculatorTest {
 
     @Test
     void testSum5() {
-        // TODO: Write a test for sum method
+        // Arrange
         ICalculator calc = new CalculatorImpl();
-        int result = 5; // replace with actual call
-        assertThat(result).isEqualTo(5);
+        int a = 2;
+        int b = 3;
+        int result = 5;
+
+        // Act
+        int actual = calc.sum(a, b);
+
+        // Assert
+        assertThat(result).isEqualTo(actual);
     }
 
     @Test
     void testSum8() {
-        // TODO: Write a test for sum method
+        // Arrange
         ICalculator calc = new CalculatorImpl();
-        int result = 8; // replace with actual call
-        assertThat(result).isEqualTo(8);
+        int a = 4;
+        int b = 4;
+        int result = 8;
+
+        // Act
+        int actual = calc.sum(a, b);
+
+        // Assert
+        assertThat(result).isEqualTo(actual);
     }
 
     @Test
     void testSubstractMinus1() {
-        // TODO: Write a test for substract method
+        // Arrange
         ICalculator calc = new CalculatorImpl();
-        int result = -1; // replace with actual call
-        assertThat(result).isEqualTo(-1);
+        int a = 2;
+        int b = 3;
+        int result = -1;
+
+        // Act
+        int actual = calc.substract(a, b);
+
+        // Assert
+        assertThat(result).isEqualTo(actual);
     }
 
     @Test
     void testSubstract7() {
-        // TODO: Write a test for substract method
+        // Arrange
         ICalculator calc = new CalculatorImpl();
-        int result = 7; // replace with actual call
-        assertThat(result).isEqualTo(7);
+        int a = 10;
+        int b = 3;
+        int result = 7;
+
+        // Act
+        int actual = calc.substract(a, b);
+
+        // Assert
+        assertThat(result).isEqualTo(actual);
     }
 
     // TODO: Write a test for multiplty method, result must be equal to 6
+    @Test
+    void testMultiply6() {
+        // Arrange
+        ICalculator calc = new CalculatorImpl();
+        int a = 2;
+        int b = 3;
+        int result = 6;
+
+        // Act
+        int actual = calc.multiply(a, b);
+
+        // Assert
+        assertThat(result).isEqualTo(actual);
+    }
 
     // TODO: Write a test for multiplty method, result must be equal to 12
+    @Test
+    void testMultiply12() {
+        // Arrange
+        ICalculator calc = new CalculatorImpl();
+        int a = 2;
+        int b = 6;
+        int result = 12;
+
+        // Act
+        int actual = calc.multiply(a, b);
+
+        // Assert
+        assertThat(result).isEqualTo(actual);
+    }
 
     // TODO: Write a test for divide method, result me be equal to 6
+    @Test
+    void testDivide6() {
+        // Arrange
+        ICalculator calc = new CalculatorImpl();
+        int a = 12;
+        int b = 2;
+        int result = 6;
+
+        // Act
+        int actual = calc.divide(a, b);
+
+        // Assert
+        assertThat(result).isEqualTo(actual);
+    }
 
     // TODO: Write a test for divide method, result me be equal to 3
+    @Test
+    void testDivide3() {
+        // Arrange
+        ICalculator calc = new CalculatorImpl();
+        int a = 12;
+        int b = 4;
+        int result = 3;
+
+        // Act
+        int actual = calc.divide(a, b);
+
+        // Assert
+        assertThat(result).isEqualTo(actual);
+    }
 }
